@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+body{
+  user-select: none;
+  height: 100%;
+  &.active{
+   background: #171823;
+   color: white;
+   header{
+      background-image: url(../src/components/img/dark-mode.png);
+      .header{
+         .dark__linght{
+            .sunny{
+               display: block;
+            }
+            .moon{
+               display: none;
+            }
+         }
+      }
+   }
+   ul{
+      border-radius: 5px;
+      background: #25273D;
+      box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+      li{
+         border-bottom: 1px solid #393A4B;
+         span{
+            color: #C8CBE7;
+         }
+      }
+   }
+   form{
+      .create{
+         background: #25273D;
+         box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+         input{
+            color:#C8CBE7;
+         }
+      }
+   }
+   .todo__info{
+      background: #25273D;
+      box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.50);
+   }
+  }
+}
+.container{
+  max-width: 540px;
+  margin: 0 auto;
+}
+#root{
+   width: 100%;
+   min-height: 100vh;
+   &::-webkit-scrollbar{
+      display: none;
+   }
+}
+.wrapper{
+   width: 100%;
+   height: 100%;
+   background-image: url(../src/components/img/todo-bg.png);
+   background-size: 100% 300px;
+   background-repeat: no-repeat;
+}

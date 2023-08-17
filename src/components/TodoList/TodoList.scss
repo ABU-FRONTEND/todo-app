@@ -1,0 +1,99 @@
+ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+   border-radius: 5px;
+   background: #FFF;
+   box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+  li{
+    width: 100%;
+    padding: 20px 24px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid #E3E4E1;
+    input[type="checkbox"]{
+      display: none;
+    }
+    label{
+      height: 24px;
+      width: 24px;
+      border-radius: 100%;
+      border: 1px solid #E3E4E1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   
+    }
+    input[type="checkbox"]:checked ~ label{
+      background: linear-gradient(135deg, #5DF 0%, #C058F3 100%);;
+      &::before {
+            content: url(../img/checkmark.svg);
+      }
+    }
+    input[type="checkbox"]:checked ~ span{
+      color: #D1D2DA;
+      text-decoration-line: line-through;
+    }
+    span{
+      flex-grow: 1;
+      font-size: 18px;
+      letter-spacing: -0.25px;
+      color: #494C6B;
+    }
+    img{
+      display: none;
+      cursor: pointer;
+    }
+    &:hover{
+      img{
+        display: block;
+      }
+    }
+  }
+  .todo__info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background: white;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
+
+    padding: 16px 24px 20px 24px;
+    .info,.todo__check,.clear__todo{
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.194px;
+      color: #9495A5;
+    }
+    .todo__check{
+      width: 100%;
+      max-width: 166px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span{
+        cursor: pointer;
+        &:hover{
+          color: #494C6B;
+        }
+        &.active{
+          color: #3A7CFD;
+        }
+      }
+    }
+    .clear__todo{
+      cursor: pointer;
+      &:hover{
+        color: #494C6B;
+      }
+      &.active{
+        color: #3A7CFD;
+      }
+    }
+  }
+}
